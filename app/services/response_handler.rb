@@ -30,6 +30,7 @@ class ResponseHandler
     if success?
       Log.info(@response.env)
       @body[:search].map do |object|
+        object[:type].capitalize!
         klass.new(object)
       end
     elsif response_with_empty_data? || bad_request?

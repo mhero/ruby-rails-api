@@ -1,5 +1,4 @@
-class Medium < ApplicationRecord
-end
+class Movie < Medium; end
 
 # == Schema Information
 #

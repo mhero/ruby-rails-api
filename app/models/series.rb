@@ -1,5 +1,4 @@
-class Medium < ApplicationRecord
-end
+class Series < Medium; end
 
 # == Schema Information
 #
