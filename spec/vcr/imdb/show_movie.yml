@@ -1,0 +1,62 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.omdbapi.com/?apikey=7f9f34b2&i=tt9561862
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v0.17.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 18 Jan 2020 17:39:13 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d74b1d4d71f3b9d6264cb13e656a2b3db1579369153; expires=Mon, 17-Feb-20
+        17:39:13 GMT; path=/; domain=.omdbapi.com; HttpOnly; SameSite=Lax
+      Cache-Control:
+      - public, max-age=86400
+      Expires:
+      - Fri, 17 Jan 2020 16:28:19 GMT
+      Last-Modified:
+      - Fri, 17 Jan 2020 15:28:19 GMT
+      Vary:
+      - "*, Accept-Encoding"
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Access-Control-Allow-Origin:
+      - "*"
+      Cf-Cache-Status:
+      - HIT
+      Age:
+      - '94253'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 557258db6d89dab4-ARN
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJUaXRsZSI6IkxvdmUsIERlYXRoICYgUm9ib3RzIiwiWWVhciI6IjIwMTnigJMiLCJSYXRlZCI6IlRWLU1BIiwiUmVsZWFzZWQiOiIxNSBNYXIgMjAxOSIsIlJ1bnRpbWUiOiIxNSBtaW4iLCJHZW5yZSI6IkFuaW1hdGlvbiwgU2hvcnQsIENvbWVkeSwgRmFudGFzeSwgSG9ycm9yLCBTY2ktRmkiLCJEaXJlY3RvciI6Ik4vQSIsIldyaXRlciI6IlRpbSBNaWxsZXIiLCJBY3RvcnMiOiJTY290dCBXaHl0ZSwgTm9sYW4gTm9ydGgsIE1hdHRoZXcgWWFuZyBLaW5nIiwiUGxvdCI6IkEgY29sbGVjdGlvbiBvZiBhbmltYXRlZCBzaG9ydCBzdG9yaWVzIHRoYXQgc3BhbiB2YXJpb3VzIGdlbnJlcyBpbmNsdWRpbmcgc2NpZW5jZSBmaWN0aW9uLCBmYW50YXN5LCBob3Jyb3IgYW5kIGNvbWVkeS4iLCJMYW5ndWFnZSI6IkVuZ2xpc2giLCJDb3VudHJ5IjoiVVNBIiwiQXdhcmRzIjoiV29uIDUgUHJpbWV0aW1lIEVtbXlzLiBBbm90aGVyIDcgbm9taW5hdGlvbnMuIiwiUG9zdGVyIjoiaHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL00vTVY1Qk1UYzFNakl5TkRJM05sNUJNbDVCYW5CblhrRnRaVGd3TWpRMU9USTBOek1ALl9WMV9TWDMwMC5qcGciLCJSYXRpbmdzIjpbeyJTb3VyY2UiOiJJbnRlcm5ldCBNb3ZpZSBEYXRhYmFzZSIsIlZhbHVlIjoiOC42LzEwIn1dLCJNZXRhc2NvcmUiOiJOL0EiLCJpbWRiUmF0aW5nIjoiOC42IiwiaW1kYlZvdGVzIjoiNzEsMTgzIiwiaW1kYklEIjoidHQ5NTYxODYyIiwiVHlwZSI6InNlcmllcyIsInRvdGFsU2Vhc29ucyI6IjIiLCJSZXNwb25zZSI6IlRydWUifQ==
+    http_version: 
+  recorded_at: Sat, 18 Jan 2020 17:39:13 GMT
+recorded_with: VCR 5.0.0
