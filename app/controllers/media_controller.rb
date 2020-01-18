@@ -4,10 +4,20 @@ class MediaController < ApplicationController
       media_params[:title],
       media_params
     )
-    render json: result.handle(Medium)
+    response_serializer(result.handle(Medium))
   end
+
+  private
 
   def media_params
     params.permit(:title, :year, :page)
+  end
+
+  def response_serializer(response)
+    if response.is_a? Fault
+      render status: response.code
+    else
+      render json: response
+    end
   end
 end
