@@ -26,13 +26,10 @@ class ResponseHandler
     @body.fetch(:response) != "True"
   end
 
-  def handle(klass)
+  def handle(handler)
     if success?
       Log.info(@response.env)
-      @body[:search].map do |object|
-        object[:type].capitalize!
-        klass.new(object)
-      end
+      handler.call @body
     elsif response_with_empty_data? || bad_request?
       Log.error_message_400(@response.env)
       Fault.new NOT_FOUND

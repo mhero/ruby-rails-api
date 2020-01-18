@@ -4,13 +4,24 @@ class MediaController < ApplicationController
       media_params[:title],
       media_params
     )
-    response_serializer(result.handle(Medium))
+    response_serializer(
+      result.handle(ResponseHandlers.search_handler)
+    )
+  end
+
+  def show
+    result = Imdb::Client.new.search_by_id(
+      media_params[:id]
+    )
+    response_serializer(
+      result.handle(ResponseHandlers.detail_handler)
+    )
   end
 
   private
 
   def media_params
-    params.permit(:title, :year, :page)
+    params.permit(:id, :title, :year, :page)
   end
 
   def response_serializer(response)
