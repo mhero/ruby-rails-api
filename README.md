@@ -1,24 +1,67 @@
-# README
+## OMDB consumer
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+API exposes [OMDB](http://www.omdbapi.com) API 
 
-Things you may want to cover:
+## Dependencies
 
-* Ruby version
+* Ruby 2.6.5
+* Node >= 12.14.0
 
-* System dependencies
+## Apps info
+ * Rails app runs in port 4567 (using this default config)
+ * React app runs in port 3000 (using this default config)
 
-* Configuration
+## Local Development
+## Docker install
 
-* Database creation
+1. Install dependencies
+```
+https://www.docker.com/products/docker-desktop
+```
 
-* Database initialization
+2. Clone repository
+3. cd into repository folder
 
-* How to run the test suite
+4. Create env files for rails and react (replace variables with credentials and server variables)
+```
+cp .env.example .env
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+5. Run
+```
+docker-compose up
+```
 
-* Deployment instructions
+## Full install
 
-* ...
+1. Install dependencies
+```
+brew install node
+\curl -sSL https://get.rvm.io | bash
+rvm install "ruby-2.6.5"
+rvm use 2.6.5
+```
+
+2. Clone repository
+3. cd into repository folder
+
+4. Run in command line next:
+
+```
+gem install bundler && bundle config jobs 7
+```
+
+5. Create env files for rails and react (replace variables with credentials and server variables)
+```
+cp .env.example .env
+```
+
+6. Run in command line next:
+```
+bundle install
+```
+
+7. run backend (on aterminal window)
+```
+rails server --binding 0.0.0.0 --port 4567
+```
