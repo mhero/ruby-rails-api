@@ -15,6 +15,10 @@ module Imdb
                   page: options.fetch(:page, 1)
                )
     end
+
+    def search_by_id(id)
+      @connetion.fetch("/", i: id)
+    end
   end
 end
 
