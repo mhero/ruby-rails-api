@@ -1,5 +1,6 @@
 require "vcr"
 require "webmock/rspec"
+require "simplecov"
 
 VCR.configure do |c|
   c.cassette_library_dir = "spec/vcr"
@@ -9,6 +10,8 @@ VCR.configure do |c|
 end
 
 WebMock.disable_net_connect!(allow_localhost: true)
+
+SimpleCov.start
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
