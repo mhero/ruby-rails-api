@@ -1,5 +1,15 @@
 class  MediumDetail < ApplicationRecord
-  
+  def actors
+    self[:actors].split(/\s*,\s*/) || self[:actors]
+  end
+
+  def genre
+    self[:genre].split(/\s*,\s*/) || self[:genre]
+  end
+
+  def released
+    Date.strptime(self[:released], "%d %b %y") || self[:released]
+  end
 end
 
 # == Schema Information
