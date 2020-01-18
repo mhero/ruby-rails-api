@@ -8,6 +8,6 @@ class MediaController < ApplicationController
   end
 
   def media_params
-    params.permit(:title, :year)
+    params.permit(:title, :year, :page)
   end
 end

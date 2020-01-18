@@ -8,7 +8,12 @@ module Imdb
     end
     
     def search_by_title(title, options = {})
-      result = @connetion.fetch("/", s: title, y: options[:year], plot: PLOT, r: FORMAT)
+      result = @connetion.fetch(
+                  "/", 
+                  s: title, y: options[:year], 
+                  plot: PLOT, r: FORMAT,
+                  page: options.fetch(:page, 1)
+               )
     end
   end
 end
