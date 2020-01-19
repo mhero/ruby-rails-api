@@ -1,4 +1,4 @@
-class Movie < Medium; end
+class Game < Medium; end
 
 # == Schema Information
 #

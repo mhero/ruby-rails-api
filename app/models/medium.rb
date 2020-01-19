@@ -5,7 +5,7 @@ end
 #
 # Table name: media
 #
-#  id         :integer          not null, primary key
+#  id         :bigint           not null, primary key
 #  poster     :string
 #  title      :string
 #  type       :string

@@ -16,7 +16,7 @@ end
 #
 # Table name: medium_details
 #
-#  id            :integer          not null, primary key
+#  id            :bigint           not null, primary key
 #  actors        :string
 #  awards        :string
 #  box_office    :string
