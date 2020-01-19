@@ -1,56 +1,8 @@
 import React, {useState} from 'react';
 import './App.css';
+import MediumDetail from './MediumDetail';
+import PosterCard from './PosterCard';
 const axios = require('axios').default;
-
-const PosterCard = ({item, onClick}) => {
-  const {title, year, poster, selected} = item;
-  return (
-    <li className={`results-item ${selected ? "selected" : ""}`} 
-        onClick={onClick}>
-      <div>
-        <img className="movie-poster" src={poster} />
-      </div>
-      <div className="results-title">{title} ({year})</div>
-    </li>
-  );
-}
-
-const MediumDetail = ({details}) => {
-  const {title, runtime, released, actors, plot, imdb_rating} = details;
-  return(
-    <>
-      <h1 className="medium-details title">{title}</h1>
-      <p>{plot}</p>
-      <table>
-      <thead>
-        <tr>
-            <th colspan="2">Stats</th>
-        </tr>
-    </thead>
-        <tr>
-          <th>IMDB Rating</th>
-          <td>{imdb_rating}</td>
-        </tr>
-        <tr>
-          <th>Date Released</th>
-          <td>{released}</td>
-        </tr>
-        <tr>
-          <th>Runtime</th>
-          <td>{runtime}</td>
-        </tr>
-      </table>
-      <h2>Actors:</h2>
-      <ul className="medium-details actors-list">{
-        actors.map(
-          (actor) => {
-            return <li>{actor}</li>
-          }
-        )}
-      </ul>
-    </>
-  );
-}
 
 const App = () => {
   const [media, setMedia] = useState(null);
