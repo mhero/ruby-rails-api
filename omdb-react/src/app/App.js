@@ -74,7 +74,7 @@ const App = () => {
   }
 
   const getMedia = () => {
-    axios.get(`${process.env.REACT_APP_API_URL}/media?title=${search}`)
+    axios.get(`${process.env.REACT_APP_API_URL}/media?title=${encodeURI(search)}`)
     .then((response) => {
       clear();
       setMedia(
