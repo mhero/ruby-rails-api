@@ -8,6 +8,7 @@ class  MediumDetail < ApplicationRecord
   end
 
   def released
+    return self[:released] if self[:released] == "N/A"
     Date.strptime(self[:released], "%d %b %y") || self[:released]
   end
 end
