@@ -2,7 +2,8 @@ import React, {useState} from 'react';
 import './App.css';
 const axios = require('axios').default;
 
-const PosterCard = ({title, year, poster, selected, onClick}) => {
+const PosterCard = ({item, onClick}) => {
+  const {title, year, poster, selected} = item;
   return (
     <li className={`results-item ${selected ? "selected" : ""}`} 
         onClick={onClick}>
@@ -69,15 +70,10 @@ const App = () => {
         <div className="results">
           <div className="movies-panel">
             <ul>
-              {media.map((item, index) => {
-                const {title, year, poster, imdb_id} = item;
+              {media.map((item) => {
                 return <PosterCard 
-                  title={title}
-                  year={year}
-                  poster={poster}                
-                  selected={index === selected}
-                  key={index}
-                  onClick={()=> getMediumDetails(imdb_id)}
+                  item = {item}
+                  onClick = {()=> getMediumDetails(item.imdb_id)}
                 />
               })}
             </ul>
