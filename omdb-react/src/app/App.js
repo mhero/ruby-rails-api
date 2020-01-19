@@ -9,7 +9,7 @@ const PosterCard = ({title, year, poster, selected, onClick}) => {
       <div>
         <img className="movie-poster" src={poster} />
       </div>
-      <div>{title}-{year}</div>
+      <div className="results-title">{title}-{year}</div>
     </li>
   );
 }
