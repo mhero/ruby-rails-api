@@ -31,3 +31,7 @@
 .DS_Store
 coverage
 postgres-data
+
+node_modules
+
+package-lock.json
