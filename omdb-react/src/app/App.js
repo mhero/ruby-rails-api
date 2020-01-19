@@ -29,11 +29,7 @@ const App = () => {
     axios.get(`${process.env.REACT_APP_API_URL}/media?title=${encodeURI(search)}`)
     .then((response) => {
       clear();
-      setMedia(
-        response.data.map(
-          (obj,index)=> ({ ...obj, selected: index === 0 })
-        )
-      );
+      setMedia(response.data);
     })
     .catch((error) => {
       updateError(error);
@@ -65,21 +61,27 @@ const App = () => {
       </div>
 
       {media && 
-        <div className="results">
-          <div className="movies-panel">
-            <ul>
-              {media.map((item) => {
-                return <PosterCard 
-                  item = {item}
-                  onClick = {()=> getMediumDetails(item.imdb_id)}
-                />
-              })}
-            </ul>
+        <>
+          <div className="results error-panel">
+            <p>Media found(click one to see more details)</p>
           </div>
-          <div className="details-panel">
-            {details && <MediumDetail details={details}/>}
+          <div className="results">
+            <div className="movies-panel">
+              
+              <ul>
+                {media.map((item) => {
+                  return <PosterCard 
+                    item = {item}
+                    onClick = {()=> getMediumDetails(item.imdb_id)}
+                  />
+                })}
+              </ul>
+            </div>
+            <div className="details-panel">
+              {details && <MediumDetail details={details}/>}
+            </div>
           </div>
-        </div>
+        </>
       }
       {error && 
         <div className="results error-panel">
