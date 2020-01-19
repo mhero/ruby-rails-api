@@ -1,6 +1,11 @@
 ## OMDB consumer
 
-API exposes [OMDB](http://www.omdbapi.com) API 
+API exposes [OMDB](http://www.omdbapi.com) API
+
+## Deployed at
+
+https://ohmydb.herokuapp.com/media?title=love <br>
+https://ohmyfront.herokuapp.com
 
 ## Dependencies
 
