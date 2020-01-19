@@ -2,9 +2,10 @@ import React, {useState} from 'react';
 import './App.css';
 const axios = require('axios').default;
 
-const PosterCard = ({title, year, poster, selected}) => {
+const PosterCard = ({title, year, poster, selected, onClick}) => {
   return (
-    <li className={`results-item ${selected ? "selected" : ""}`}>
+    <li className={`results-item ${selected ? "selected" : ""}`} 
+        onClick={onClick}>
       <div>
         <img className="movie-poster" src={poster} />
       </div>
@@ -13,14 +14,16 @@ const PosterCard = ({title, year, poster, selected}) => {
   );
 }
 
-const MediumDetail = ({mediumDetails}) => {
+const MediumDetail = ({details}) => {
+  const {title, runtime, released, actors, plot, imdb_rating} = details;
   return(
-    <div>Details Here</div>
+    <div>{title}</div>
   );
 }
 
 const App = () => {
   const [media, setMedia] = useState(null);
+  const [details, setDetails] = useState(null);
   const [search, setSearch] = useState(null);
   const [error, setError] = useState(null);
   const [selected, setSelected] = useState(0);
@@ -43,6 +46,16 @@ const App = () => {
     });
   }
 
+  const getMediumDetails = (id) => {
+    axios.get(`${process.env.REACT_APP_API_URL}/media/${id}`)
+    .then((response) => {
+      setDetails(response.data);
+    })
+    .catch((error) => {
+      updateError(error);
+    });
+  }
+
   return (
     <div className="App">
       <div className="search">
@@ -57,18 +70,20 @@ const App = () => {
           <div className="movies-panel">
             <ul>
               {media.map((item, index) => {
-                const {title, year, poster} = item;
+                const {title, year, poster, imdb_id} = item;
                 return <PosterCard 
                   title={title}
                   year={year}
                   poster={poster}                
-                  selected={index == selected}
+                  selected={index === selected}
+                  key={index}
+                  onClick={()=> getMediumDetails(imdb_id)}
                 />
               })}
             </ul>
           </div>
           <div className="details-panel">
-            <MediumDetail />
+            {details && <MediumDetail details={details}/>}
           </div>
         </div>
       }
