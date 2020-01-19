@@ -9,24 +9,31 @@
 
 .movies-panel {
   width: 75%;
-  height: auto;
+  height: 800px;
+  overflow-y: scroll;
 }
 
 .movies-panel ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   
 }
 
 .details-panel {
   width: 25%;
+  padding-right: 40px;
 }
 
 .results-item {
   width: 250px;
   height: 350px;
   margin: 30px 0;
+}
+
+.results-item img {
+  cursor: pointer;
 }
 
 .movie-poster {
@@ -54,4 +61,46 @@
 .search button {
   margin-left: 10px;
   height: 30px;
+}
+
+.medium-details.title {
+  margin-top: 30px;
+  font-size: 20px;
+}
+
+table {
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+td, th  {
+  border-bottom: 1px solid #333;
+}
+
+th {
+  width: 200px;
+}
+
+td {
+  width: 150px;
+}
+
+h2 {
+  margin-top: 30px;
+  font-size: 18px;
+}
+
+.medium-details.actors-list {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.medium-details.actors-list li{
+  margin-left: 0;
+}
+
+.results.results.error-panel p {
+  margin: 20px auto;
 }
