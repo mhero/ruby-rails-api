@@ -10,7 +10,7 @@ const PosterCard = ({item, onClick}) => {
       <div>
         <img className="movie-poster" src={poster} />
       </div>
-      <div className="results-title">{title}-{year}</div>
+      <div className="results-title">{title} ({year})</div>
     </li>
   );
 }
@@ -27,9 +27,15 @@ const App = () => {
   const [details, setDetails] = useState(null);
   const [search, setSearch] = useState(null);
   const [error, setError] = useState(null);
-  const [selected, setSelected] = useState(0);
+
+  const clear = () => {
+    setMedia(null);
+    setDetails(null);
+    setError(null);
+  }
 
   const updateError = (error) => {
+    clear();
     if (error.response != null && error.response.status === 404) {
       setError({status: 404, message: "No media found"});
     } else {
@@ -40,7 +46,12 @@ const App = () => {
   const getMedia = () => {
     axios.get(`${process.env.REACT_APP_API_URL}/media?title=${search}`)
     .then((response) => {
-      setMedia(response.data);
+      clear();
+      setMedia(
+        response.data.map(
+          (obj,index)=> ({ ...obj, selected: index === 0 })
+        )
+      );
     })
     .catch((error) => {
       updateError(error);
@@ -51,6 +62,11 @@ const App = () => {
     axios.get(`${process.env.REACT_APP_API_URL}/media/${id}`)
     .then((response) => {
       setDetails(response.data);
+      setMedia(
+        media.map(
+          obj=> ({ ...obj, selected: obj.imdb_id === id})
+        )
+      );
     })
     .catch((error) => {
       updateError(error);
