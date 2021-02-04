@@ -62,7 +62,7 @@ gem install bundler && bundle config jobs 7
 5. Create env files for rails and react (replace variables with credentials and server variables)
 ```
 cp .env.example .env
-cp ./omdb-react/.env.example ./omdb-react/.env
+cp ./omdb-react/.env.example ./omdb-react/.env.development
 ```
 
 6. Replace file with credentials of local postgres db(in development section)
