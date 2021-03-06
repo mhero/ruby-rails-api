@@ -4,7 +4,7 @@ ENV APP_HOME /myapp
 RUN mkdir $APP_HOME
 WORKDIR $APP_HOME
 
-RUN gem install bundler && bundle config jobs 7
+RUN gem install bundler -v 2.2.8 && bundle config jobs 7
 
 ADD Gemfile $APP_HOME/
 ADD Gemfile.lock  $APP_HOME/

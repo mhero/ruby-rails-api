@@ -2,11 +2,6 @@
 
 API exposes [OMDB](http://www.omdbapi.com) API
 
-## Deployed at
-
-https://ohmydb.herokuapp.com/media?title=love <br>
-https://ohmyfront.herokuapp.com
-
 ## Dependencies
 
 * Ruby 2.6.6
@@ -36,6 +31,11 @@ cp ./omdb-react/.env.example ./omdb-react/.env
 5. Run
 ```
 docker-compose up
+```
+
+6. Rails deebug
+```
+docker exec -it $( docker ps | grep ruby-rails-api | awk "{print \$1}" | head -n 1 ) rails c
 ```
 
 ## Full install
