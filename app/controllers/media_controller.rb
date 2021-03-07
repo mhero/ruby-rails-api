@@ -4,6 +4,7 @@ class MediaController < ApplicationController
       media_params[:title],
       media_params
     )
+
     response_serializer(
       result.handle(ResponseHandlers.search_handler)
     )
@@ -30,5 +31,15 @@ class MediaController < ApplicationController
     else
       render json: response
     end
+  end
+
+  def suggest_query
+    Query.search(media_params[:title]).records.first
+  end
+
+  def store_query
+    Query.create(
+      in_query: media_params[:title]
+    )
   end
 end
