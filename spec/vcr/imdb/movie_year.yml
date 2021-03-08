@@ -10,7 +10,7 @@ http_interactions:
       Content-Type:
       - application/json
       User-Agent:
-      - Faraday v0.17.3
+      - Faraday v1.3.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -21,7 +21,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Jan 2020 11:58:01 GMT
+      - Mon, 08 Mar 2021 14:00:50 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -29,14 +29,14 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=db9e8435f8365cdf1d7b7b080b00a2c601579348681; expires=Mon, 17-Feb-20
-        11:58:01 GMT; path=/; domain=.omdbapi.com; HttpOnly; SameSite=Lax
+      - __cfduid=d5c660b1970d55f4ffa944767d15dec741615212050; expires=Wed, 07-Apr-21
+        14:00:50 GMT; path=/; domain=.omdbapi.com; HttpOnly; SameSite=Lax
       Cache-Control:
       - public, max-age=86400
       Expires:
-      - Sat, 18 Jan 2020 12:58:01 GMT
+      - Mon, 08 Mar 2021 15:00:50 GMT
       Last-Modified:
-      - Sat, 18 Jan 2020 11:58:01 GMT
+      - Mon, 08 Mar 2021 14:00:50 GMT
       Vary:
       - "*, Accept-Encoding"
       X-Aspnet-Version:
@@ -47,13 +47,14 @@ http_interactions:
       - "*"
       Cf-Cache-Status:
       - MISS
+      Cf-Request-Id:
+      - '08b3bd0e99000040c6d7313000000001'
       Server:
       - cloudflare
       Cf-Ray:
-      - 557065089ca78659-ARN
+      - 62cc9790fb5540c6-LHR
     body:
       encoding: ASCII-8BIT
       string: '{"Search":[{"Title":"Fight Club","Year":"1999","imdbID":"tt0137523","Type":"movie","Poster":"https://m.media-amazon.com/images/M/MV5BMmEzNTkxYjQtZTc0MC00YTVjLTg5ZTEtZWMwOWVlYzY0NWIwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"}],"totalResults":"1","Response":"True"}'
-    http_version: 
-  recorded_at: Sat, 18 Jan 2020 11:58:01 GMT
-recorded_with: VCR 5.0.0
+  recorded_at: Mon, 08 Mar 2021 14:00:50 GMT
+recorded_with: VCR 6.0.0

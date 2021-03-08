@@ -2,7 +2,7 @@ module CustomLogger
   class Log
     @logger ||= Rails.logger
 
-    class << self 
+    class << self
       def error_message_400(response)
         @logger.error  "#{response[:method].to_s.upcase} \
                         #{response[:url].to_s}: #{response[:status]} \
@@ -10,9 +10,7 @@ module CustomLogger
       end
 
       def error_body(body)
-        if !body.nil? && !body.empty? && body.kind_of?(String)
-          body = ::JSON.parse(body)
-        end
+        body if !body.nil? && !body.empty? && body.kind_of?(String)
       end
 
       def error_message_500(response)
