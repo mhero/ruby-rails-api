@@ -7,7 +7,7 @@ ruby '2.6.6'
 gem 'rails', '~> 6.1.3'
 
 # Use Puma as the app server
-gem 'puma', '~> 5.2'
+gem 'puma', '~> 5.3'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
