@@ -10,7 +10,7 @@ http_interactions:
       Content-Type:
       - application/json
       User-Agent:
-      - Faraday v0.17.3
+      - Faraday v1.7.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -21,22 +21,19 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Jan 2020 11:59:21 GMT
+      - Sat, 21 Aug 2021 15:58:50 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
       - '47'
       Connection:
       - keep-alive
-      Set-Cookie:
-      - __cfduid=d9ade4d7fd7bc5ec16ff1292b3579cd5b1579348761; expires=Mon, 17-Feb-20
-        11:59:21 GMT; path=/; domain=.omdbapi.com; HttpOnly; SameSite=Lax
       Cache-Control:
       - public, max-age=86400
       Expires:
-      - Sat, 18 Jan 2020 12:48:17 GMT
+      - Sat, 21 Aug 2021 16:58:50 GMT
       Last-Modified:
-      - Sat, 18 Jan 2020 11:48:17 GMT
+      - Sat, 21 Aug 2021 15:58:50 GMT
       Vary:
       - "*, Accept-Encoding"
       X-Aspnet-Version:
@@ -46,18 +43,15 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       Cf-Cache-Status:
-      - HIT
-      Age:
-      - '664'
+      - MISS
       Accept-Ranges:
       - bytes
       Server:
       - cloudflare
       Cf-Ray:
-      - 55706700adcb7628-ARN
+      - 682510ab4d16dac0-ARN
     body:
       encoding: UTF-8
       string: '{"Response":"False","Error":"Movie not found!"}'
-    http_version: 
-  recorded_at: Sat, 18 Jan 2020 11:59:21 GMT
-recorded_with: VCR 5.0.0
+  recorded_at: Sat, 21 Aug 2021 15:58:50 GMT
+recorded_with: VCR 6.0.0

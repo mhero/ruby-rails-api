@@ -10,7 +10,7 @@ http_interactions:
       Content-Type:
       - application/json
       User-Agent:
-      - Faraday v0.17.3
+      - Faraday v1.7.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -21,22 +21,19 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Jan 2020 11:59:22 GMT
+      - Sat, 21 Aug 2021 15:58:49 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
-      Set-Cookie:
-      - __cfduid=d72401d6e7889f5ee1dd406457421b68c1579348761; expires=Mon, 17-Feb-20
-        11:59:21 GMT; path=/; domain=.omdbapi.com; HttpOnly; SameSite=Lax
       Cache-Control:
       - public, max-age=86400
       Expires:
-      - Sat, 18 Jan 2020 12:59:21 GMT
+      - Sat, 21 Aug 2021 16:58:49 GMT
       Last-Modified:
-      - Sat, 18 Jan 2020 11:59:21 GMT
+      - Sat, 21 Aug 2021 15:58:49 GMT
       Vary:
       - "*, Accept-Encoding"
       X-Aspnet-Version:
@@ -50,10 +47,9 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 557067014d13cafc-ARN
+      - 682510a7b96815e0-ARN
     body:
       encoding: ASCII-8BIT
-      string: '{"Response":"False","Error":"Something went wrong."}'
-    http_version: 
-  recorded_at: Sat, 18 Jan 2020 11:59:22 GMT
-recorded_with: VCR 5.0.0
+      string: '{"Response":"False","Error":"Incorrect IMDb ID."}'
+  recorded_at: Sat, 21 Aug 2021 15:58:49 GMT
+recorded_with: VCR 6.0.0

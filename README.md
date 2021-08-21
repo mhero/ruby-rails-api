@@ -2,14 +2,9 @@
 
 API exposes [OMDB](http://www.omdbapi.com) API
 
-## Deployed at
-
-https://ohmydb.herokuapp.com/media?title=love <br>
-https://ohmyfront.herokuapp.com
-
 ## Dependencies
 
-* Ruby 2.6.5
+* Ruby 2.6.8
 * Node >= 12.14.0
 
 ## Apps info
@@ -38,14 +33,19 @@ cp ./omdb-react/.env.example ./omdb-react/.env
 docker-compose up
 ```
 
+6. Rails debug
+```
+docker exec -it $( docker ps | grep ruby-rails-api | awk "{print \$1}" | head -n 1 ) rails c
+```
+
 ## Full install
 
 1. Install dependencies
 ```
 brew install node
 \curl -sSL https://get.rvm.io | bash
-rvm install "ruby-2.6.5"
-rvm use 2.6.5
+rvm install "ruby-2.6.8"
+rvm use 2.6.8
 brew install postgresql
 ```
 
@@ -62,7 +62,7 @@ gem install bundler && bundle config jobs 7
 5. Create env files for rails and react (replace variables with credentials and server variables)
 ```
 cp .env.example .env
-cp ./omdb-react/.env.example ./omdb-react/.env
+cp ./omdb-react/.env.example ./omdb-react/.env.development
 ```
 
 6. Replace file with credentials of local postgres db(in development section)
@@ -86,3 +86,7 @@ rails server --binding 0.0.0.0 --port 4567
 ```
 cd omdb-react && yarn start
 ```
+
+# Related read
+
+https://www.elastic.co/guide/en/elastic-stack-get-started/current/get-started-docker.html
