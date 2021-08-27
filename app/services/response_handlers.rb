@@ -4,14 +4,14 @@ class ResponseHandlers
       Proc.new do |body|
         body[:search].map do |object|
           object[:type].capitalize!
-          Medium.new(object)
+          Medium.create(object)
         end
       end
     end
 
     def detail_handler
       Proc.new do |body|
-        MediumDetail.new(body.except(:type, :ratings, :response))
+        MediumDetail.create(body.except(:type, :ratings, :response))
       end
     end
   end

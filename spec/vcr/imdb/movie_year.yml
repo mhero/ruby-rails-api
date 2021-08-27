@@ -10,7 +10,7 @@ http_interactions:
       Content-Type:
       - application/json
       User-Agent:
-      - Faraday v0.17.3
+      - Faraday v1.7.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -21,22 +21,19 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Jan 2020 11:58:01 GMT
+      - Sat, 21 Aug 2021 15:58:49 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
-      Set-Cookie:
-      - __cfduid=db9e8435f8365cdf1d7b7b080b00a2c601579348681; expires=Mon, 17-Feb-20
-        11:58:01 GMT; path=/; domain=.omdbapi.com; HttpOnly; SameSite=Lax
       Cache-Control:
       - public, max-age=86400
       Expires:
-      - Sat, 18 Jan 2020 12:58:01 GMT
+      - Sat, 21 Aug 2021 16:58:49 GMT
       Last-Modified:
-      - Sat, 18 Jan 2020 11:58:01 GMT
+      - Sat, 21 Aug 2021 15:58:49 GMT
       Vary:
       - "*, Accept-Encoding"
       X-Aspnet-Version:
@@ -50,10 +47,9 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 557065089ca78659-ARN
+      - 682510a39cc31699-ARN
     body:
       encoding: ASCII-8BIT
       string: '{"Search":[{"Title":"Fight Club","Year":"1999","imdbID":"tt0137523","Type":"movie","Poster":"https://m.media-amazon.com/images/M/MV5BMmEzNTkxYjQtZTc0MC00YTVjLTg5ZTEtZWMwOWVlYzY0NWIwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"}],"totalResults":"1","Response":"True"}'
-    http_version: 
-  recorded_at: Sat, 18 Jan 2020 11:58:01 GMT
-recorded_with: VCR 5.0.0
+  recorded_at: Sat, 21 Aug 2021 15:58:49 GMT
+recorded_with: VCR 6.0.0

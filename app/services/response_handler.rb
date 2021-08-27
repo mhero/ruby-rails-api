@@ -9,9 +9,7 @@ class ResponseHandler
   def initialize(response)
     @response = response
     @status = response&.status
-    @body = JSON.parse(
-              response&.body, symbolize_names: true
-            ).deep_transform_keys { |key| snake_key(key) }
+    @body = parse_body
   end
 
   def bad_request?
@@ -23,7 +21,7 @@ class ResponseHandler
   end
 
   def response_with_empty_data?
-    @body.fetch(:response) != "True"
+    @body.empty? || @body.fetch(:response) != "True"
   end
 
   def handle(handler)
@@ -40,6 +38,15 @@ class ResponseHandler
   end
 
   private
+
+  def parse_body
+    JSON.parse(
+      @response&.body, symbolize_names: true
+    ).deep_transform_keys { |key| snake_key(key) }
+  rescue JSON::ParserError
+    Log.error_message_400(@response.env)
+    {}
+  end
 
   def snake_key(key)
     key.to_s.underscore.to_sym

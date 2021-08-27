@@ -12,6 +12,13 @@ development:
   password: postgres
   port: 5432
 
+test:
+  <<: *default
+  database: development
+  timeout: 5000
+  host: localhost
+  port: 5432
+
 staging:
   <<: *default
   url: <%= ENV['DATABASE_URL'] %>

@@ -11,10 +11,10 @@ RSpec.describe MediaController do
             ) do
             get :index, params: { title: "hulk"}
           end
-    
+
           expect(response.status).to eq 200
         end
-    
+
         it "returns 404 with invalid params" do
           VCR.use_cassette(
               "imdb/movie_error",
@@ -35,7 +35,7 @@ RSpec.describe MediaController do
             ) do
             get :index, params: { title: "Fight Club", year: 1999 }
           end
-    
+
           expect(response.status).to eq 200
         end
         it "returns 404 with invalid params" do
@@ -60,7 +60,7 @@ RSpec.describe MediaController do
             ) do
               get :show, params: { id: "tt9561862" }
         end
-        
+
         expect(response.status).to eq 200
       end
       it "returns a 404 response with an invalid id" do
@@ -71,7 +71,7 @@ RSpec.describe MediaController do
             ) do
               get :show, params: { id: "holamundo" }
         end
-        
+
         expect(response.status).to eq 404
       end
     end

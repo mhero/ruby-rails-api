@@ -10,7 +10,7 @@ http_interactions:
       Content-Type:
       - application/json
       User-Agent:
-      - Faraday v0.17.3
+      - Faraday v1.7.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -21,22 +21,19 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Jan 2020 17:39:13 GMT
+      - Sat, 21 Aug 2021 15:58:50 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
-      Set-Cookie:
-      - __cfduid=dbb1a650e5bedab0dc00d2f5d03bb4e751579369153; expires=Mon, 17-Feb-20
-        17:39:13 GMT; path=/; domain=.omdbapi.com; HttpOnly; SameSite=Lax
       Cache-Control:
       - public, max-age=86400
       Expires:
-      - Sat, 18 Jan 2020 18:12:22 GMT
+      - Sat, 21 Aug 2021 16:58:50 GMT
       Last-Modified:
-      - Sat, 18 Jan 2020 17:12:22 GMT
+      - Sat, 21 Aug 2021 15:58:50 GMT
       Vary:
       - "*, Accept-Encoding"
       X-Aspnet-Version:
@@ -46,17 +43,14 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       Cf-Cache-Status:
-      - HIT
-      Age:
-      - '1611'
+      - MISS
       Server:
       - cloudflare
       Cf-Ray:
-      - 557258dbeff0cae4-ARN
+      - 682510ade9201695-ARN
     body:
       encoding: ASCII-8BIT
-      string: '{"Response":"False","Error":"Error converting data type varchar to
-        int."}'
-    http_version: 
-  recorded_at: Sat, 18 Jan 2020 17:39:13 GMT
-recorded_with: VCR 5.0.0
+      string: '{"Response":"False","Error":"Conversion from string "holamundo" to
+        type ''Double'' is not valid."}'
+  recorded_at: Sat, 21 Aug 2021 15:58:50 GMT
+recorded_with: VCR 6.0.0
