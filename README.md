@@ -4,7 +4,7 @@ API exposes [OMDB](http://www.omdbapi.com) API
 
 ## Dependencies
 
-* Ruby 2.6.8
+* Ruby 3.1.0
 * Node >= 12.14.0
 
 ## Apps info
@@ -44,8 +44,8 @@ docker exec -it $( docker ps | grep ruby-rails-api | awk "{print \$1}" | head -n
 ```
 brew install node
 \curl -sSL https://get.rvm.io | bash
-rvm install "ruby-2.6.8"
-rvm use 2.6.8
+rvm install "ruby-3.1.0"
+rvm use 3.1.0
 brew install postgresql
 ```
 

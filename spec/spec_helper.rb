@@ -1,6 +1,7 @@
 require "vcr"
 require "webmock/rspec"
 require "simplecov"
+require "active_support"
 
 VCR.configure do |c|
   c.cassette_library_dir = "spec/vcr"
