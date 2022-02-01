@@ -10,7 +10,7 @@ http_interactions:
       Content-Type:
       - application/json
       User-Agent:
-      - Faraday v1.7.0
+      - Faraday v1.9.3
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -21,7 +21,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 21 Aug 2021 15:58:49 GMT
+      - Tue, 01 Feb 2022 18:33:52 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -31,9 +31,9 @@ http_interactions:
       Cache-Control:
       - public, max-age=86400
       Expires:
-      - Sat, 21 Aug 2021 16:58:49 GMT
+      - Tue, 01 Feb 2022 19:33:52 GMT
       Last-Modified:
-      - Sat, 21 Aug 2021 15:58:49 GMT
+      - Tue, 01 Feb 2022 18:33:52 GMT
       Vary:
       - "*, Accept-Encoding"
       X-Aspnet-Version:
@@ -47,9 +47,9 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 682510a39cc31699-ARN
+      - 6d6d4543fd0a82e0-IAD
     body:
       encoding: ASCII-8BIT
       string: '{"Search":[{"Title":"Fight Club","Year":"1999","imdbID":"tt0137523","Type":"movie","Poster":"https://m.media-amazon.com/images/M/MV5BMmEzNTkxYjQtZTc0MC00YTVjLTg5ZTEtZWMwOWVlYzY0NWIwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"}],"totalResults":"1","Response":"True"}'
-  recorded_at: Sat, 21 Aug 2021 15:58:49 GMT
+  recorded_at: Tue, 01 Feb 2022 18:33:52 GMT
 recorded_with: VCR 6.0.0
