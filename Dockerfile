@@ -1,4 +1,4 @@
-FROM ruby:ruby:3.1.0-bullseye
+FROM ruby:3.1.0-bullseye
 
 ENV APP_HOME /myapp
 RUN mkdir $APP_HOME
