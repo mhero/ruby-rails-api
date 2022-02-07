@@ -5,10 +5,10 @@ API exposes [OMDB](http://www.omdbapi.com) API
 ## Dependencies
 
 * Ruby 3.1.0
-* Node >= 12.14.0
+* Node >= 17.4.0
 
 ## Apps info
- * Rails app runs in port 3000 (using this default config)
+ * Rails app runs in port 4567 (using this default config)
  * React app runs in port 8084 (using this default config)
 
 ## Local Development
