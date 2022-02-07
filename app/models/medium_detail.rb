@@ -17,30 +17,30 @@ end
 #
 # Table name: medium_details
 #
-#  id            :bigint           not null, primary key
-#  actors        :string
-#  awards        :string
-#  box_office    :string
-#  country       :string
-#  director      :string
-#  dvd           :string
-#  genre         :string
-#  imdb_rating   :string
-#  imdb_votes    :string
-#  language      :string
-#  metascore     :string
-#  plot          :string
-#  poster        :string
-#  production    :string
+#  id            :integer          not null, primary key
+#  title         :string
+#  year          :string
 #  rated         :string
 #  released      :string
 #  runtime       :string
-#  title         :string
-#  total_seasons :string
-#  website       :string
+#  genre         :string
+#  director      :string
 #  writer        :string
-#  year          :string
+#  actors        :string
+#  plot          :string
+#  language      :string
+#  country       :string
+#  awards        :string
+#  poster        :string
+#  metascore     :string
+#  imdb_rating   :string
+#  imdb_votes    :string
+#  imdb_id       :string
+#  total_seasons :string
+#  dvd           :string
+#  box_office    :string
+#  production    :string
+#  website       :string
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
-#  imdb_id       :string
 #
