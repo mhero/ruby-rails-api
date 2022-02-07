@@ -5,12 +5,12 @@ end
 #
 # Table name: media
 #
-#  id         :bigint           not null, primary key
-#  poster     :string
+#  id         :integer          not null, primary key
 #  title      :string
-#  type       :string
 #  year       :string
+#  imdb_id    :string
+#  poster     :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  imdb_id    :string
+#  type       :string
 #
