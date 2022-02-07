@@ -55,14 +55,13 @@ brew install postgresql
 4. Run in command line next:
 
 ```
-npm install -g yarn
 gem install bundler && bundle config jobs 7
 ```
 
 5. Create env files for rails and react (replace variables with credentials and server variables)
 ```
 cp .env.example .env
-cp ./omdb-react/.env.example ./omdb-react/.env.development
+cp ./omdb-react/.env.example ./omdb-react/.env
 ```
 
 6. Replace file with credentials of local postgres db(in development section)
@@ -73,7 +72,7 @@ database.yml
 7. Run in command line next:
 ```
 bundle install
-cd omdb-react && yarn install
+cd omdb-react && npm install
 ```
 
 8. run backend (on aterminal window)
@@ -84,7 +83,7 @@ rails server --binding 0.0.0.0 --port 4567
 9. run frontend (on a different terminal window)
 
 ```
-cd omdb-react && yarn start
+cd omdb-react && npm start
 ```
 
 # Related read
