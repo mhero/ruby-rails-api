@@ -2,7 +2,7 @@ version: '3'
 
 services:
   postgres:
-    image: postgres:11.2-alpine
+    image: postgres:14.1-alpine
     ports:
       - 5433:5432
     expose:
@@ -21,20 +21,20 @@ services:
     depends_on:
       - postgres
     expose:
-      - 3000
+      - 4567
     ports:
-      - 3000:3000
+      - 4567:4567
     working_dir: /app
     volumes:
       - .:/app
     command: >
       bash -c "chmod +x wait-for-it.sh && ./wait-for-it.sh -t 60 postgres:5432
-      && (rake db:exists && rake db:migrate || rake db:setup)
-      && rails server --binding 0.0.0.0 --port 3000"
+      && (rake db:setup || rails db:create || rake db:migrate) 
+      && rails server --binding 0.0.0.0 --port 4567"
 
   frontend:
     container_name: front
-    image: node:12.14.0-stretch
+    image: node:17-stretch-slim
     expose:
       - 8084
     ports:
@@ -43,41 +43,7 @@ services:
     volumes:
       - .:/app
     command: >
-      bash -c "chmod +x wait-for-it.sh && ./wait-for-it.sh -t 100 backend:3000
-      && npm install yarn && cd omdb-react && yarn install && yarn start"
+      bash -c "chmod +x wait-for-it.sh && ./wait-for-it.sh -t 200 backend:4567
+      && cd omdb-react && npm install && npm start"
     depends_on:
       - backend
-
-  es01:
-    image: docker.elastic.co/elasticsearch/elasticsearch:7.11.1
-    container_name: es01
-    environment:
-      - node.name=es01
-      - cluster.name=es-docker-cluster
-      - discovery.type=single-node
-      - bootstrap.memory_lock=true
-      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
-    ulimits:
-      memlock:
-        soft: -1
-        hard: -1
-    volumes:
-      - data01:/usr/share/elasticsearch/data
-    expose:
-      - 9200
-    ports:
-      - 9200:9200
-      - 9300:9300
-
-  kib01:
-    image: docker.elastic.co/kibana/kibana:7.11.1
-    container_name: kib01
-    ports:
-      - 5601:5601
-    environment:
-      ELASTICSEARCH_URL: http://es01:9200
-      ELASTICSEARCH_HOSTS: '["http://es01:9200"]'
-
-volumes:
-  data01:
-    driver: local
