@@ -92,7 +92,7 @@ GEM
       elasticsearch-transport (= 7.17.0)
     elasticsearch-api (7.17.0)
       multi_json
-    elasticsearch-model (7.2.0)
+    elasticsearch-model (7.2.1)
       activesupport (> 3)
       elasticsearch (~> 7)
       hashie
@@ -131,7 +131,7 @@ GEM
       activesupport (>= 5.0)
     hashdiff (1.0.1)
     hashie (5.0.0)
-    i18n (1.9.1)
+    i18n (1.10.0)
       concurrent-ruby (~> 1.0)
     io-wait (0.2.1)
     listen (3.7.1)
