@@ -1,10 +1,10 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.1.0"
+ruby "3.1.2"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails"
-gem 'rails', '~> 7.0.1'
+gem 'rails', '~> 7.0.3'
 
 # Use Puma as the app server
 gem "puma", "~> 5.6"
@@ -26,7 +26,7 @@ gem "elasticsearch-model"
 gem "elasticsearch-rails"
 gem "pry", "~> 0.14.1"
 gem 'net-smtp', require: false
-gem 'pg', '~> 1.1'
+gem 'pg', '~> 1.3'
 
 group :development, :test do
   # Call "byebug" anywhere in the code to stop execution and get a debugger console

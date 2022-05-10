@@ -7,7 +7,7 @@ end
 #
 # Table name: queries
 #
-#  id         :integer          not null, primary key
+#  id         :bigint           not null, primary key
 #  in_query   :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null

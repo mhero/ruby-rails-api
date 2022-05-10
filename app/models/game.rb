@@ -4,12 +4,12 @@ class Game < Medium; end
 #
 # Table name: media
 #
-#  id         :integer          not null, primary key
-#  title      :string
-#  year       :string
-#  imdb_id    :string
+#  id         :bigint           not null, primary key
 #  poster     :string
+#  title      :string
+#  type       :string
+#  year       :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  type       :string
+#  imdb_id    :string
 #
