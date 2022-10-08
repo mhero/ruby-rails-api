@@ -229,7 +229,7 @@ GEM
       rspec-support (~> 3.10)
     rspec-support (3.11.0)
     ruby2_keywords (0.0.5)
-    shoulda-matchers (5.1.0)
+    shoulda-matchers (5.2.0)
       activesupport (>= 5.2.0)
     simplecov (0.21.2)
       docile (~> 1.1)
