@@ -24,7 +24,7 @@ gem "dotenv-rails"
 # Elastic search
 gem "elasticsearch-model"
 gem "elasticsearch-rails"
-gem "pry", "~> 0.14.1"
+gem "pry", "~> 0.14.2"
 gem 'net-smtp', require: false
 gem 'pg', '~> 1.4'
 
