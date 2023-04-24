@@ -165,7 +165,7 @@ GEM
     nokogiri (1.14.3)
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
-    pg (1.4.6)
+    pg (1.5.0)
     pry (0.14.2)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -269,7 +269,7 @@ DEPENDENCIES
   faraday_middleware
   listen (>= 3.0.5, < 3.9)
   net-smtp
-  pg (~> 1.4)
+  pg (~> 1.5)
   pry (~> 0.14.2)
   puma (~> 6.2)
   rack-cors

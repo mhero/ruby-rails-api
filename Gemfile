@@ -26,7 +26,7 @@ gem "elasticsearch-model"
 gem "elasticsearch-rails"
 gem "pry", "~> 0.14.2"
 gem 'net-smtp', require: false
-gem 'pg', '~> 1.4'
+gem 'pg', '~> 1.5'
 
 group :development, :test do
   # Call "byebug" anywhere in the code to stop execution and get a debugger console
