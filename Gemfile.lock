@@ -66,8 +66,8 @@ GEM
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
       tzinfo (~> 2.0)
-    addressable (2.8.0)
-      public_suffix (>= 2.0.2, < 5.0)
+    addressable (2.8.4)
+      public_suffix (>= 2.0.2, < 6.0)
     annotate (3.2.0)
       activerecord (>= 3.2, < 8.0)
       rake (>= 10.4, < 14.0)
@@ -87,17 +87,17 @@ GEM
     dotenv-rails (2.8.1)
       dotenv (= 2.8.1)
       railties (>= 3.2)
-    elasticsearch (7.17.1)
-      elasticsearch-api (= 7.17.1)
-      elasticsearch-transport (= 7.17.1)
-    elasticsearch-api (7.17.1)
+    elasticsearch (7.17.7)
+      elasticsearch-api (= 7.17.7)
+      elasticsearch-transport (= 7.17.7)
+    elasticsearch-api (7.17.7)
       multi_json
     elasticsearch-model (7.2.1)
       activesupport (> 3)
       elasticsearch (~> 7)
       hashie
     elasticsearch-rails (7.2.1)
-    elasticsearch-transport (7.17.1)
+    elasticsearch-transport (7.17.7)
       faraday (~> 1)
       multi_json
     erubi (1.12.0)
@@ -147,11 +147,10 @@ GEM
     marcel (1.0.2)
     method_source (1.0.0)
     mini_mime (1.1.2)
-    mini_portile2 (2.8.2)
     minitest (5.18.1)
-    msgpack (1.6.0)
+    msgpack (1.7.1)
     multi_json (1.15.0)
-    multipart-post (2.2.3)
+    multipart-post (2.3.0)
     net-imap (0.3.6)
       date
       net-protocol
@@ -162,14 +161,15 @@ GEM
     net-smtp (0.3.3)
       net-protocol
     nio4r (2.5.9)
-    nokogiri (1.15.2)
-      mini_portile2 (~> 2.8.2)
+    nokogiri (1.15.2-aarch64-linux)
+      racc (~> 1.4)
+    nokogiri (1.15.2-arm64-darwin)
       racc (~> 1.4)
     pg (1.5.3)
     pry (0.14.2)
       coderay (~> 1.1)
       method_source (~> 1.0)
-    public_suffix (4.0.7)
+    public_suffix (5.0.1)
     puma (6.3.0)
       nio4r (~> 2.0)
     racc (1.7.1)
@@ -192,8 +192,9 @@ GEM
       activesupport (= 7.0.6)
       bundler (>= 1.15.0)
       railties (= 7.0.6)
-    rails-dom-testing (2.0.3)
-      activesupport (>= 4.2.0)
+    rails-dom-testing (2.1.1)
+      activesupport (>= 5.0.0)
+      minitest
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.6.0)
       loofah (~> 2.21)
@@ -226,7 +227,7 @@ GEM
       rspec-expectations (~> 3.12)
       rspec-mocks (~> 3.12)
       rspec-support (~> 3.12)
-    rspec-support (3.12.0)
+    rspec-support (3.12.1)
     ruby2_keywords (0.0.5)
     shoulda-matchers (5.3.0)
       activesupport (>= 5.2.0)
@@ -240,8 +241,8 @@ GEM
     spring-watcher-listen (2.1.0)
       listen (>= 2.7, < 4.0)
       spring (>= 4)
-    sqlite3 (1.6.3)
-      mini_portile2 (~> 2.8.0)
+    sqlite3 (1.6.3-aarch64-linux)
+    sqlite3 (1.6.3-arm64-darwin)
     thor (1.2.2)
     timeout (0.4.0)
     tzinfo (2.0.6)
@@ -257,7 +258,8 @@ GEM
     zeitwerk (2.6.8)
 
 PLATFORMS
-  ruby
+  aarch64-linux
+  arm64-darwin-22
 
 DEPENDENCIES
   annotate
@@ -285,7 +287,7 @@ DEPENDENCIES
   webmock
 
 RUBY VERSION
-   ruby 3.1.2p20
+   ruby 3.2.2p53
 
 BUNDLED WITH
-   2.3.7
+   2.4.15
