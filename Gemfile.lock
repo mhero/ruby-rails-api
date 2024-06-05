@@ -101,19 +101,19 @@ GEM
       dotenv (= 3.1.2)
       railties (>= 6.1)
     drb (2.2.1)
-    elasticsearch (7.17.7)
-      elasticsearch-api (= 7.17.7)
-      elasticsearch-transport (= 7.17.7)
-    elasticsearch-api (7.17.7)
+    elastic-transport (8.3.2)
+      faraday (< 3)
       multi_json
-    elasticsearch-model (7.2.1)
+    elasticsearch (8.13.0)
+      elastic-transport (~> 8.3)
+      elasticsearch-api (= 8.13.0)
+    elasticsearch-api (8.13.0)
+      multi_json
+    elasticsearch-model (8.0.0)
       activesupport (> 3)
-      elasticsearch (~> 7)
+      elasticsearch (~> 8)
       hashie
     elasticsearch-rails (7.2.1)
-    elasticsearch-transport (7.17.7)
-      faraday (~> 1)
-      multi_json
     erubi (1.12.0)
     faraday (1.10.3)
       faraday-em_http (~> 1.0)
@@ -168,7 +168,7 @@ GEM
     minitest (5.23.1)
     msgpack (1.7.2)
     multi_json (1.15.0)
-    multipart-post (2.3.0)
+    multipart-post (2.4.1)
     mutex_m (0.2.0)
     net-imap (0.4.12)
       date
